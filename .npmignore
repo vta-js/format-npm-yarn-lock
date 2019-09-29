@@ -1,0 +1,10 @@
+/node_modules/
+/src/
+/__tests__/
+/.dependabot/
+/coverage/
+/*.*rc
+/*.*ignore
+/*.config.js
+/tsconfig*.json
+/*.yml

@@ -1,0 +1,4 @@
+{
+  "extends": ["@vta/eslint-config"],
+  "rules": {}
+}

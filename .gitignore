@@ -1,0 +1,8 @@
+**/node_modules/
+**/dist/
+**/coverage/
+package-lock.json
+*.lock
+*-error.log
+!yarn.lock
+**/__tests__/**/yarn.lock

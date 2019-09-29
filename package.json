@@ -1,0 +1,50 @@
+{
+  "name": "@vta/format-npm-yarn-lock",
+  "version": "1.0.0",
+  "description": "format package-lock.json or yarn.lock after dependencies installed",
+  "main": "scripts/format.js",
+  "typings": "scripts/format.d.ts",
+  "bin": {
+    "vta-format-npm-yarn-lock": "./bin/vta-format-npm-yarn-lock.js"
+  },
+  "engines": {
+    "node": ">= 12.6.0"
+  },
+  "scripts": {
+    "lint": "eslint . --ext .js,.ts",
+    "build": "npm run lint && vta-tsc -p tsconfig-build.json",
+    "npm-publish": "yarn run build && npm publish --registry https://registry.npmjs.org",
+    "test": "jest",
+    "test:u": "jest --updateSnapshot",
+    "format": "prettier --write \"**/*.{js,ts,json}\"",
+    "install": "node scripts/install",
+    "dep-upgrade": "yarn upgrade && yarn run install"
+  },
+  "keywords": [
+    "vta"
+  ],
+  "author": "vta@yhbit.net",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vta-js/format-npm-yarn-lock.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vta-js/format-npm-yarn-lock/issues"
+  },
+  "homepage": "https://github.com/vta-js/format-npm-yarn-lock#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.0",
+    "@vta/eslint-config": "^1.0.0",
+    "cross-spawn": "^7.0.0",
+    "eslint": "^6.4.0",
+    "jest": "^24.8.0",
+    "prettier": "^1.18.0"
+  },
+  "dependencies": {
+    "chalk": "^2.4.0",
+    "commander": "^3.0.0",
+    "fs-extra": "^8.0.0"
+  },
+  "peerDependencies": {}
+}

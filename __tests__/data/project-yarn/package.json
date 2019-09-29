@@ -1,0 +1,11 @@
+{
+  "name": "project-yarn",
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0"
+  },
+  "dependencies": {
+    "react": "^16.10.0",
+    "react-dom": "^16.10.0"
+  }
+}
