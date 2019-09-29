@@ -12,8 +12,7 @@
   },
   "scripts": {
     "lint": "eslint . --ext .js,.ts",
-    "build": "npm run lint && vta-tsc -p tsconfig-build.json",
-    "npm-publish": "yarn run build && npm publish --registry https://registry.npmjs.org",
+    "npm-publish": "npm publish --access public --registry https://registry.npmjs.org",
     "test": "jest",
     "test:u": "jest --updateSnapshot",
     "format": "prettier --write \"**/*.{js,ts,json}\"",
