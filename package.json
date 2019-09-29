@@ -1,6 +1,6 @@
 {
   "name": "@vta/format-npm-yarn-lock",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "format package-lock.json or yarn.lock after dependencies installed",
   "main": "scripts/format.js",
   "typings": "scripts/format.d.ts",
@@ -35,14 +35,13 @@
   "devDependencies": {
     "@types/jest": "^24.0.0",
     "@vta/eslint-config": "^1.0.0",
-    "cross-spawn": "^7.0.0",
     "eslint": "^6.4.0",
     "jest": "^24.8.0",
     "prettier": "^1.18.0"
   },
   "dependencies": {
-    "chalk": "^2.4.0",
     "commander": "^3.0.0",
+    "cross-spawn": "^7.0.0",
     "fs-extra": "^8.0.0"
   },
   "peerDependencies": {}

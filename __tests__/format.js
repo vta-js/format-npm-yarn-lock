@@ -41,24 +41,26 @@ describe("format-test", () => {
   it("project-null", () => {
     const cwd = path.resolve(__dirname, "./data/project-null");
     return format({ cwd }).then(res => {
-      expect(res).toBe(undefined);
+      expect(res).toBe("NOLOCKFILE");
     });
   });
-  it("project-npm", () => {
-    const cwd = path.resolve(__dirname, "./data/project-npm");
-    const lock = path.resolve(cwd, "./package-lock.json");
-    return fse
-      .remove(lock)
-      .then(() => spawn("npm install", [], { cwd }))
-      .then(() => check(cwd, lock));
-  });
+  if (!process.env.TRAVIS) {
+    it("project-npm", () => {
+      const cwd = path.resolve(__dirname, "./data/project-npm");
+      const lock = path.resolve(cwd, "./package-lock.json");
+      return fse
+        .remove(lock)
+        .then(() => spawn("npm install", [], { cwd }))
+        .then(() => check(cwd, lock));
+    });
 
-  it("project-yarn", () => {
-    const cwd = path.resolve(__dirname, "./data/project-yarn");
-    const lock = path.resolve(cwd, "./yarn.lock");
-    return fse
-      .remove(lock)
-      .then(() => spawn("yarn install", [], { cwd }))
-      .then(() => check(cwd, lock));
-  });
+    it("project-yarn", () => {
+      const cwd = path.resolve(__dirname, "./data/project-yarn");
+      const lock = path.resolve(cwd, "./yarn.lock");
+      return fse
+        .remove(lock)
+        .then(() => spawn("yarn install", [], { cwd }))
+        .then(() => check(cwd, lock));
+    });
+  }
 });

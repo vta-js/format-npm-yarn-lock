@@ -16,7 +16,8 @@ module.exports = function format({ cwd = process.cwd() } = {}) {
       .readFile(lockFile, "utf8")
       .then(blob => blob.toString())
       .then(content => content.replace(reg, ""))
-      .then(content => fse.writeFile(lockFile, content, { encoding: "utf8" }));
+      .then(content => fse.writeFile(lockFile, content, { encoding: "utf8" }))
+      .then(() => "SUCCESS");
   }
-  return Promise.resolve();
+  return Promise.resolve("NOLOCKFILE");
 };
