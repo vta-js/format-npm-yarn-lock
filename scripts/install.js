@@ -1,4 +1,3 @@
-const path = require("path");
-const spawn = require("cross-spawn");
+const format = require("./format");
 
-spawn("node", [path.resolve(__dirname, "./child.js")], { cwd: process.cwd() });
+format();

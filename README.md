@@ -1,6 +1,6 @@
 # @vta/format-npm-yarn-lock
 
-format package-lock.json or yarn.lock after dependencies installed
+format package-lock.json or yarn.lock
 
 ![npm](https://img.shields.io/npm/v/@vta/format-npm-yarn-lock)
 [![Build Status](https://travis-ci.com/vta-js/format-npm-yarn-lock.svg?branch=master)](https://travis-ci.com/vta-js/format-npm-yarn-lock)
@@ -15,8 +15,6 @@ yarn add @vta/format-npm-yarn-lock --dev
 ```
 
 ## Usage
-
-after added this pkg to your package.json's `dependencies` or `devDependencies`, when all your dependencies have beed installed, we will format your `package-lock.json` or `yarn.lock` to remove all **?cache=**. we also support cli usage and js usage.
 
 ### using in cli
 
@@ -40,6 +38,30 @@ format({}).then(err => {
   }
   console.log("format successfully");
 });
+```
+
+### best practices
+
+if use `lerna`, please set your package.json's **install** script. when all your dependencies have beed installed, we will format your lock file automatically. upgrade dependencies please run `yarn dep-upgrade`
+
+```json
+{
+  "scripts": {
+    "install": "vta-format-npm-yarn-lock",
+    "dep-upgrade": "rimraf yarn.lock && lerna bootstrap --force-local"
+  }
+}
+```
+
+if don't use `lerna`, please set your package.json's scripts like this. when all your dependencies have beed installed, please run `yarn format-lock` to format your lock file. upgrade dependencies please run `yarn dep-upgrade`
+
+```json
+{
+  "scripts": {
+    "format-lock": "vta-format-npm-yarn-lock",
+    "dep-upgrade": "yarn upgrade && yarn run format-lock"
+  }
+}
 ```
 
 ## Options
