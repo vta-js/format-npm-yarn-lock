@@ -907,13 +907,13 @@ cross-spawn@^6.0.0, cross-spawn@^6.0.5:
     which "^1.2.9"
 
 cross-spawn@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.npm.taobao.org/cross-spawn/download/cross-spawn-7.0.0.tgz#21ef9470443262f33dba80b2705a91db959b2e03"
-  integrity sha1-Ie+UcEQyYvM9uoCycFqR25WbLgM=
+  version "7.0.1"
+  resolved "https://registry.npm.taobao.org/cross-spawn/download/cross-spawn-7.0.1.tgz#0ab56286e0f7c24e153d04cc2aa027e43a9a5d14"
+  integrity sha1-CrVihuD3wk4VPQTMKqAn5DqaXRQ=
   dependencies:
     path-key "^3.1.0"
-    shebang-command "^1.2.0"
-    which "^1.2.9"
+    shebang-command "^2.0.0"
+    which "^2.0.1"
 
 cssom@0.3.x, "cssom@>= 0.3.2 < 0.4.0":
   version "0.3.8"
@@ -1139,9 +1139,9 @@ eslint-config-airbnb-base@^14.0.0:
     object.entries "^1.1.0"
 
 eslint-config-prettier@^6.0.0:
-  version "6.3.0"
-  resolved "https://registry.npm.taobao.org/eslint-config-prettier/download/eslint-config-prettier-6.3.0.tgz#e73b48e59dc49d950843f3eb96d519e2248286a3"
-  integrity sha1-5ztI5Z3EnZUIQ/PrltUZ4iSChqM=
+  version "6.4.0"
+  resolved "https://registry.npm.taobao.org/eslint-config-prettier/download/eslint-config-prettier-6.4.0.tgz#0a04f147e31d33c6c161b2dd0971418ac52d0477"
+  integrity sha1-CgTxR+MdM8bBYbLdCXFBisUtBHc=
   dependencies:
     get-stdin "^6.0.0"
 
@@ -1718,9 +1718,9 @@ has@^1.0.1, has@^1.0.3:
     function-bind "^1.1.1"
 
 hosted-git-info@^2.1.4:
-  version "2.8.4"
-  resolved "https://registry.npm.taobao.org/hosted-git-info/download/hosted-git-info-2.8.4.tgz#44119abaf4bc64692a16ace34700fed9c03e2546"
-  integrity sha1-RBGauvS8ZGkqFqzjRwD+2cA+JUY=
+  version "2.8.5"
+  resolved "https://registry.npm.taobao.org/hosted-git-info/download/hosted-git-info-2.8.5.tgz#759cfcf2c4d156ade59b0b2dfabddc42a6b9c70c"
+  integrity sha1-dZz88sTRVq3lmwst+r3cQqa5xww=
 
 html-encoding-sniffer@^1.0.2:
   version "1.0.2"
@@ -3598,10 +3598,22 @@ shebang-command@^1.2.0:
   dependencies:
     shebang-regex "^1.0.0"
 
+shebang-command@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npm.taobao.org/shebang-command/download/shebang-command-2.0.0.tgz#ccd0af4f8835fbdc265b82461aaf0c36663f34ea"
+  integrity sha1-zNCvT4g1+9wmW4JGGq8MNmY/NOo=
+  dependencies:
+    shebang-regex "^3.0.0"
+
 shebang-regex@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npm.taobao.org/shebang-regex/download/shebang-regex-1.0.0.tgz#da42f49740c0b42db2ca9728571cb190c98efea3"
   integrity sha1-2kL0l0DAtC2yypcoVxyxkMmO/qM=
+
+shebang-regex@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npm.taobao.org/shebang-regex/download/shebang-regex-3.0.0.tgz#ae16f1644d873ecad843b0307b143362d4c42172"
+  integrity sha1-rhbxZE2HPsrYQ7AwexQzYtTEIXI=
 
 shellwords@^0.1.1:
   version "0.1.1"
@@ -4167,6 +4179,13 @@ which@^1.2.9, which@^1.3.0:
   version "1.3.1"
   resolved "https://registry.npm.taobao.org/which/download/which-1.3.1.tgz#a45043d54f5805316da8d62f9f50918d3da70b0a"
   integrity sha1-pFBD1U9YBTFtqNYvn1CRjT2nCwo=
+  dependencies:
+    isexe "^2.0.0"
+
+which@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.npm.taobao.org/which/download/which-2.0.1.tgz#f1cf94d07a8e571b6ff006aeb91d0300c47ef0a4"
+  integrity sha1-8c+U0HqOVxtv8AauuR0DAMR+8KQ=
   dependencies:
     isexe "^2.0.0"
 
