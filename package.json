@@ -1,6 +1,6 @@
 {
   "name": "@vta/format-npm-yarn-lock",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "format package-lock.json or yarn.lock",
   "main": "scripts/format.js",
   "typings": "scripts/format.d.ts",
@@ -8,7 +8,7 @@
     "vta-format-npm-yarn-lock": "./bin/vta-format-npm-yarn-lock.js"
   },
   "engines": {
-    "node": ">= 12.6.0"
+    "node": ">= 10.16.0"
   },
   "scripts": {
     "lint": "eslint . --ext .js,.ts",
