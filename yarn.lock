@@ -390,10 +390,10 @@
     lodash.unescape "4.0.1"
     semver "5.5.0"
 
-"@vta/eslint-config@^1.0.0":
-  version "1.0.2"
-  resolved "https://registry.npm.taobao.org/@vta/eslint-config/download/@vta/eslint-config-1.0.2.tgz#03f481194ee1da690dbfae932adacbe8df0e55f1"
-  integrity sha1-A/SBGU7h2mkNv66TKtrL6N8OVfE=
+"@vta/eslint-config@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.npm.taobao.org/@vta/eslint-config/download/@vta/eslint-config-1.0.3.tgz?cache=0&sync_timestamp=1571734652623&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40vta%2Feslint-config%2Fdownload%2F%40vta%2Feslint-config-1.0.3.tgz#f1da9a814cc7f195bdf5b384723499a2ac935826"
+  integrity sha1-8dqagUzH8ZW99bOEcjSZoqyTWCY=
   dependencies:
     babel-eslint "^10.0.0"
     eslint-config-airbnb-base "^14.0.0"
