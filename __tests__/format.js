@@ -17,9 +17,10 @@ function check(cwd, lock, snapShot = false) {
           .then(blob => blob.toString())
           .then(content => {
             expect(content).toMatchSnapshot();
+            return true;
           });
       }
-      return undefined;
+      return true;
     });
 }
 
@@ -29,14 +30,20 @@ describe("format-test", () => {
     const lock = path.resolve(cwd, "./yarn.lock");
     return fse
       .copyFile(path.resolve(cwd, "./yarn.lock.backup"), lock)
-      .then(() => check(cwd, lock, true));
+      .then(() => check(cwd, lock, true))
+      .then(checked => {
+        expect(checked).toBe(true);
+      });
   });
   it("file-npm", () => {
     const cwd = path.resolve(__dirname, "./data/file-npm");
     const lock = path.resolve(cwd, "./package-lock.json");
     return fse
       .copyFile(path.resolve(cwd, "./package-lock.json.backup"), lock)
-      .then(() => check(cwd, lock, true));
+      .then(() => check(cwd, lock, true))
+      .then(checked => {
+        expect(checked).toBe(true);
+      });
   });
   it("project-null", () => {
     const cwd = path.resolve(__dirname, "./data/project-null");
@@ -51,7 +58,10 @@ describe("format-test", () => {
       return fse
         .remove(lock)
         .then(() => spawn("npm install", [], { cwd }))
-        .then(() => check(cwd, lock));
+        .then(() => check(cwd, lock))
+        .then(checked => {
+          expect(checked).toBe(true);
+        });
     });
 
     it("project-yarn", () => {
@@ -60,7 +70,10 @@ describe("format-test", () => {
       return fse
         .remove(lock)
         .then(() => spawn("yarn install", [], { cwd }))
-        .then(() => check(cwd, lock));
+        .then(() => check(cwd, lock))
+        .then(checked => {
+          expect(checked).toBe(true);
+        });
     });
   }
 });
