@@ -15,9 +15,33 @@
     "npm-publish": "npm publish --access public --registry https://registry.npmjs.org",
     "test": "jest",
     "test:u": "jest --updateSnapshot",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "pre-commit": "yarn lint-staged",
     "format": "prettier --write \"**/*.{js,ts,json}\"",
     "format-lock": "node scripts/install",
     "dep-upgrade": "yarn upgrade && yarn run format-lock"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn pre-commit",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,vue}": [
+      "prettier --write",
+      "eslint",
+      "git add"
+    ],
+    "*.{json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-angular"
+    ]
   },
   "keywords": [
     "vta"
@@ -33,12 +57,18 @@
   },
   "homepage": "https://github.com/vta-js/format-npm-yarn-lock#readme",
   "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-angular": "^8.2.0",
+    "@commitlint/travis-cli": "^8.2.0",
     "@types/jest": "^24.0.0",
     "@vta/eslint-config": "^1.0.0",
     "chalk": "^2.4.0",
+    "conventional-changelog-cli": "^2.0.0",
     "cross-spawn": "^7.0.0",
     "eslint": "^6.4.0",
+    "husky": "^3.0.0",
     "jest": "^24.8.0",
+    "lint-staged": "^9.4.0",
     "prettier": "^1.18.0"
   },
   "dependencies": {
