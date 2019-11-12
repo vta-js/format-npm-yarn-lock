@@ -62,7 +62,7 @@
     "@commitlint/travis-cli": "^8.2.0",
     "@types/jest": "^24.0.0",
     "@vta/eslint-config": "^1.0.0",
-    "chalk": "^2.4.0",
+    "chalk": "^3.0.0",
     "conventional-changelog-cli": "^2.0.0",
     "cross-spawn": "^7.0.0",
     "eslint": "^6.6.0",
