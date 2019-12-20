@@ -611,10 +611,10 @@
     semver "^6.3.0"
     tsutils "^3.17.1"
 
-"@vta/eslint-config@^1.0.0":
-  version "1.1.0"
-  resolved "https://registry.npm.taobao.org/@vta/eslint-config/download/@vta/eslint-config-1.1.0.tgz#d16c9200f7db8213fe350c5ac61b6d63df4eb452"
-  integrity sha1-0WySAPfbghP+NQxaxhttY99OtFI=
+"@vta/eslint-config@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.npm.taobao.org/@vta/eslint-config/download/@vta/eslint-config-1.1.1.tgz#6b660607739efbda88e273c7bc61ee914b465350"
+  integrity sha1-a2YGB3Oe+9qI4nPHvGHukUtGU1A=
   dependencies:
     babel-eslint "^10.0.0"
     eslint-config-airbnb-base "^14.0.0"
