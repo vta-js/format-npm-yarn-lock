@@ -57,7 +57,7 @@
   },
   "homepage": "https://github.com/vta-js/format-npm-yarn-lock#readme",
   "devDependencies": {
-    "@commitlint/cli": "^8.2.0",
+    "@commitlint/cli": "^8.3.5",
     "@commitlint/config-angular": "^8.2.0",
     "@commitlint/travis-cli": "^8.2.0",
     "@types/jest": "^24.0.0",
