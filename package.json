@@ -30,12 +30,10 @@
   "lint-staged": {
     "*.{js,jsx,ts,tsx,vue}": [
       "prettier --write",
-      "eslint",
-      "git add"
+      "eslint"
     ],
     "*.{json,md}": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ]
   },
   "commitlint": {
@@ -60,16 +58,16 @@
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-angular": "^8.2.0",
     "@commitlint/travis-cli": "^8.2.0",
-    "@types/jest": "^24.0.0",
+    "@types/jest": "^25.0.0",
     "@vta/eslint-config": "^1.0.0",
-    "chalk": "^3.0.0",
+    "chalk": "^4.0.0",
     "conventional-changelog-cli": "^2.0.0",
     "cross-spawn": "^7.0.0",
     "eslint": "^6.6.0",
-    "husky": "^3.0.0",
-    "jest": "^24.8.0",
-    "lint-staged": "^9.4.0",
-    "prettier": "^1.18.0"
+    "husky": "^4.0.0",
+    "jest": "^25.0.0",
+    "lint-staged": "^10.0.0",
+    "prettier": "^2.0.0"
   },
   "dependencies": {
     "commander": "^4.0.0",

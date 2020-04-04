@@ -8,7 +8,7 @@ module.exports = async function spawn(command, args = [], options = {}) {
       stdio: ["pipe", "pipe", "pipe"],
       ...options,
     });
-    p.on("close", code => {
+    p.on("close", (code) => {
       if (code === 0) {
         resolve();
       } else {
