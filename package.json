@@ -58,7 +58,7 @@
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-angular": "^8.2.0",
     "@commitlint/travis-cli": "^8.2.0",
-    "@types/jest": "^25.0.0",
+    "@types/jest": "^26.0.17",
     "@vta/eslint-config": "^1.0.0",
     "chalk": "^4.0.0",
     "conventional-changelog-cli": "^2.0.0",
